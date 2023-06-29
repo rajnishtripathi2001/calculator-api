@@ -1,11 +1,8 @@
 const express = require("express");
 const app = express();
 
-//JSON =>  JS Object Notation
-//Object (Key:Value)
 app.use(express.json());
 
-//passing data using Query Prams
 app.get("/", (req, res) => {
   if (req.query.a == null || req.query.b == null) {
     res.status(400).send({ error: "Number is null" });
