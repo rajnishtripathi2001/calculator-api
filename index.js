@@ -3,6 +3,7 @@ const app = express();
 
 app.use(express.json());
 
+
 app.get("/", (req, res) => {
   if (req.query.a == null || req.query.b == null) {
     res.status(400).send({ error: "Number is null" });
