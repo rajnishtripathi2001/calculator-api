@@ -3,7 +3,6 @@ const app = express();
 
 app.use(express.json());
 
-
 app.get("/sum", (req, res) => {
   if (req.query.a == null || req.query.b == null) {
     res.status(400).send({ error: "Number is null" });
@@ -12,7 +11,6 @@ app.get("/sum", (req, res) => {
   var b = Number(req.query.b);
 
   const sum = a + b;
-  res.status(200).send({ Sum: sum});
 });
 
 app.get("/sub", (req, res) => {
@@ -29,4 +27,3 @@ app.get("/sub", (req, res) => {
 app.listen(5000, () => {
   console.log("Server Running at port : 5000");
 });
-
